@@ -11,5 +11,8 @@ export class LoginComponent implements OnInit {
 
 	ngOnInit(): void {
 	}
-
+	onSubmit() {
+		// tslint:disable-next-line: no-console
+		console.log('hehe');
+	}
 }
