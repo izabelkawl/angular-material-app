@@ -1,6 +1,32 @@
-<nav>
-    <a routerLink="/">Home</a>
-    <a routerLink="/login">Login</a>
-</nav>
-<button mat-button color="accent">Accent</button>
-<router-outlet></router-outlet>
+<mat-drawer-container class="example-container mat-typography" autosize>
+    <mat-drawer #drawer mode="side" disableClose="true" opened="true">
+      <button mat-mini-fab (click)="showFiller = !showFiller" color="warn" style="margin: 10px;">
+        <mat-icon aria-label="Menu">menu</mat-icon>
+      </button>
+  
+      <mat-nav-list>
+        <mat-list-item routerLink="/">
+            <h4 mat-line *ngIf="showFiller">Home</h4>
+          <mat-icon mat-list-icon>home</mat-icon>
+        </mat-list-item>
+        <mat-list-item routerLink="/login">
+          <mat-icon mat-list-icon>
+            account_circle
+            </mat-icon>
+          <h4 mat-line *ngIf="showFiller">Login</h4>
+        </mat-list-item>
+        <mat-list-item routerLink="/register">
+          <mat-icon mat-list-icon>accessibility_new</mat-icon>
+          <h4 mat-line *ngIf="showFiller">Register</h4>
+        </mat-list-item>
+        <mat-list-item routerLink="/login">
+          <mat-icon mat-list-icon>filter_alt</mat-icon>
+          <h4 mat-line *ngIf="showFiller">Table</h4>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+     <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>

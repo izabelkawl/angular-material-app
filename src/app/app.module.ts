@@ -10,11 +10,13 @@ import { HomeComponent } from './shared/components/home/home.component';
 import { MaterialModules } from './material-modules';
 import { LoginModule } from './shared/components/login/login.module';
 import { CommonModule } from '@angular/common';
+import { RegisterComponent } from './shared/components/register/register.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HomeComponent,
+  RegisterComponent,
 	],
 	imports: [
 		BrowserModule,
