@@ -1,12 +1,12 @@
 mat-drawer-container {
-    height: 100vh;
     border: 1px solid rgba(0, 0, 0, 0.5);
     background: #eee;
-    .sidenav-content {
+    .sidenav-content{
+        
+    min-height: 100vh;
         display: flex;
         height: 100%;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
     }
 }

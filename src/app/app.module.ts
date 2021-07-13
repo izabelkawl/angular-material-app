@@ -7,16 +7,18 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './shared/components/home/home.component';
 
 // Material all imports
-import { MaterialModules } from './material-modules';
-import { LoginModule } from './shared/components/login/login.module';
 import { CommonModule } from '@angular/common';
+import { MaterialModules } from './material-modules';
+import { FilterComponent } from './shared/components/filter/filter.component';
+import { LoginModule } from './shared/components/login/login.module';
 import { RegisterComponent } from './shared/components/register/register.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HomeComponent,
-  RegisterComponent,
+	RegisterComponent,
+	FilterComponent,
 	],
 	imports: [
 		BrowserModule,

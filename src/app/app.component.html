@@ -1,4 +1,4 @@
-<mat-drawer-container class="example-container mat-typography" autosize>
+<mat-drawer-container autosize>
     <mat-drawer #drawer mode="side" disableClose="true" opened="true">
       <button mat-mini-fab (click)="showFiller = !showFiller" color="warn" style="margin: 10px;">
         <mat-icon aria-label="Menu">menu</mat-icon>
@@ -19,7 +19,7 @@
           <mat-icon mat-list-icon>accessibility_new</mat-icon>
           <h4 mat-line *ngIf="showFiller">Register</h4>
         </mat-list-item>
-        <mat-list-item routerLink="/login">
+        <mat-list-item routerLink="/filter">
           <mat-icon mat-list-icon>filter_alt</mat-icon>
           <h4 mat-line *ngIf="showFiller">Table</h4>
         </mat-list-item>
