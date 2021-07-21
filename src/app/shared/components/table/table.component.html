@@ -1,0 +1,23 @@
+<table>
+    <tr>
+        <th  *ngFor="let val of columns">
+            {{val}}
+        </th>
+    </tr>
+    <tr *ngFor="let row of rows; let i = index">
+        <td  *ngFor="let col of columns; let j = index">
+
+            <span *ngIf="col=='address'; else elseBlockAdress">
+                {{ row[col].street }}
+            </span>
+            <ng-template #elseBlockAdress>
+                <span *ngIf="col=='company'; else elseBlockCompany">
+                    {{ row[col].name+ ' ' + row[col].catchPhrase}}
+                </span>
+            </ng-template>
+            <ng-template #elseBlockCompany>
+                {{ row[col] }}
+            </ng-template>
+        </td>
+    </tr>
+</table>

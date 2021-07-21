@@ -21,7 +21,11 @@
         </mat-list-item>
         <mat-list-item routerLink="/filter">
           <mat-icon mat-list-icon>filter_alt</mat-icon>
-          <h4 mat-line *ngIf="showFiller">Table</h4>
+          <h4 mat-line *ngIf="showFiller">Filter</h4>
+        </mat-list-item>
+        <mat-list-item routerLink="/table">
+          <mat-icon mat-list-icon>table_view</mat-icon>
+          <h4 mat-line *ngIf="showFiller">Reactive Table</h4>
         </mat-list-item>
       </mat-nav-list>
     </mat-drawer>

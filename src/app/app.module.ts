@@ -12,13 +12,16 @@ import { MaterialModules } from './material-modules';
 import { FilterComponent } from './shared/components/filter/filter.component';
 import { LoginModule } from './shared/components/login/login.module';
 import { RegisterComponent } from './shared/components/register/register.component';
+import { TableComponent } from './shared/components/table/table.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HomeComponent,
-	RegisterComponent,
-	FilterComponent,
+		RegisterComponent,
+		FilterComponent,
+		TableComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -27,8 +30,9 @@ import { RegisterComponent } from './shared/components/register/register.compone
 		MaterialModules,
 		LoginModule,
 		CommonModule,
+		HttpClientModule,
 	],
 	providers: [],
-	bootstrap: [ AppComponent ],
+	bootstrap: [AppComponent],
 })
 export class AppModule { }

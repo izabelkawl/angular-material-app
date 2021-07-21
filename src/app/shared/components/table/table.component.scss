@@ -1,0 +1,15 @@
+@use '../../../../styles.scss';
+
+table {
+    border-collapse: collapse;
+    background-color: styles.$color-white;
+    tr {
+        padding: 10px;
+    }
+    td,
+    th {
+        border: 1px solid styles.$color-gray;
+        padding: 5px 30px;
+        text-align: center;
+    }
+}
